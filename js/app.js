@@ -1,7 +1,7 @@
 import { obtenerClientes, eliminarCliente } from './API.js';
 let tipo = document.querySelector('#tp');
 const formulario = document.querySelector('#formulario');
-formulario.addEventListener('submit', buscarcliente);
+formulario.addEventListener('click', buscarcliente);
 
 (function() {
     const listado = document.querySelector('#listado-clientes');
