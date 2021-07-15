@@ -80,7 +80,7 @@ async function buscarcliente()
                  console.log(terminoBusqueda);
                  console.log(nombre);
                  
-            if(terminoBusqueda==nombre)
+            if(terminoBusqueda==email)
             {
                 console.log("iguales");
                 row.innerHTML += `
