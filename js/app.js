@@ -55,6 +55,7 @@ formulario.addEventListener('click', buscarcliente);
 
 async function buscarcliente()
 {
+    let val=0;
     const listado = document.querySelector('#listado-clientes');
     const terminoBusqueda = document.querySelector('#termino').value;
     listado.innerHTML="";
@@ -82,6 +83,7 @@ async function buscarcliente()
                  
             if(terminoBusqueda==email)
             {
+                val=1;
                 console.log("iguales");
                 row.innerHTML += `
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
@@ -99,9 +101,7 @@ async function buscarcliente()
                     <a href="#" data-cliente="${id}" class="text-red-600 hover:text-red-900 eliminar">Eliminar</a>
                 </td>
             `;
-            }else{
-                row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
-            }
+            } 
 
 
              }
@@ -109,6 +109,7 @@ async function buscarcliente()
              {
                 if(terminoBusqueda==telefono)
                 {
+                                    val=1;
                     row.innerHTML += `
                     <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                         <p class="text-sm leading-5 font-medium text-gray-700 text-lg  font-bold"> ${nombre} </p>
@@ -125,13 +126,13 @@ async function buscarcliente()
                         <a href="#" data-cliente="${id}" class="text-red-600 hover:text-red-900 eliminar">Eliminar</a>
                     </td>
                 `;
-                }else{
-row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;                }
+                } 
 
              }else if(tipo.value=="Empresa")
              {
                 if(terminoBusqueda==empresa)
                 {
+                                    val=1;
                     row.innerHTML += `
                     <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                         <p class="text-sm leading-5 font-medium text-gray-700 text-lg  font-bold"> ${nombre} </p>
@@ -148,11 +149,12 @@ row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;                }
                         <a href="#" data-cliente="${id}" class="text-red-600 hover:text-red-900 eliminar">Eliminar</a>
                     </td>
                 `;
-                }else{
-                   row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
-                }
+                
              }
-           
+           if(val == 0 )
+           {
+                row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
+           }
           
 
             listado.appendChild(row);
