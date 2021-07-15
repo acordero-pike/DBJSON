@@ -55,6 +55,7 @@ formulario.addEventListener('click', buscarcliente);
 
 async function buscarcliente()
 {
+    const listado = document.querySelector('#listado-clientes');
     const terminoBusqueda = document.querySelector('#termino').value;
     listado.innerHTML="";
     const clientes = await obtenerClientes();
