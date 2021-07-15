@@ -60,6 +60,7 @@ async function buscarcliente()
     const clientes = await obtenerClientes();
     if(tipo.value=="")
     {
+        console.log("x");
         mostrarClientes();
     }
 
@@ -68,11 +69,12 @@ async function buscarcliente()
             const row = document.createElement('tr');
 
              
+ console.log(tipo.value);
 
 
              if(tipo.value=="Nombre")
              {
-
+                 
             if(terminoBusqueda==nombre)
             {
                 row.innerHTML += `
