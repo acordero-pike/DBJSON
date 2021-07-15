@@ -155,7 +155,10 @@ async function buscarcliente()
             
           
 
-            listado.appendChild(row);
+            if(val==1)
+            {
+                listado.appendChild(row);
+            }
         })
      if(val == 0 )
            {
