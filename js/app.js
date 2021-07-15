@@ -160,13 +160,15 @@ async function buscarcliente()
                 listado.appendChild(row);
             }
         })
+    const row = document.createElement('tr');
      if(val == 0 )
            {
                 row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
+                 listado.appendChild(row);
            }
           
 
-            listado.appendChild(row);
+          
 }
 
 
