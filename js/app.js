@@ -152,15 +152,18 @@ async function buscarcliente()
                 
              }
              }
-           if(val == 0 )
+            
+          
+
+            listado.appendChild(row);
+        })
+     if(val == 0 )
            {
                 row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
            }
           
 
             listado.appendChild(row);
-        })
-    
 }
 
 
