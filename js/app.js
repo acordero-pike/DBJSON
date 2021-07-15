@@ -71,6 +71,7 @@ async function buscarcliente()
 
              
  console.log(tipo.value);
+             console.log(terminoBusqueda);
 
 
              if(tipo.value=="Nombre")
@@ -158,6 +159,7 @@ async function buscarcliente()
 
 
 async function mostrarClientes1() {
+     const listado = document.querySelector('#listado-clientes');
     const clientes = await obtenerClientes();
     
     clientes.forEach( cliente => {
