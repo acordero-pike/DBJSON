@@ -100,7 +100,7 @@ async function buscarcliente()
                 </td>
             `;
             }else{
-                row.innerHTML += `Sin Resultados`;
+                row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
             }
 
 
@@ -126,8 +126,7 @@ async function buscarcliente()
                     </td>
                 `;
                 }else{
-                    row.innerHTML += `Sin Resultados`;
-                }
+row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;                }
 
              }else if(tipo.value=="Empresa")
              {
@@ -150,7 +149,7 @@ async function buscarcliente()
                     </td>
                 `;
                 }else{
-                    row.innerHTML += `Sin Resultados`;
+                   row.innerHTML += `<td colspan="4"> Sin Resultados </td>`;
                 }
              }
            
