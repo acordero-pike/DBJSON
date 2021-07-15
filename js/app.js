@@ -71,11 +71,14 @@ async function buscarcliente()
 
              
  console.log(tipo.value);
-             console.log(terminoBusqueda);
+             
+            
 
 
              if(tipo.value=="Nombre")
              {
+                 console.log(terminoBusqueda);
+                 console.log(nombre);
                  
             if(terminoBusqueda==nombre)
             {
