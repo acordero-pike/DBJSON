@@ -175,7 +175,7 @@ async function buscarcliente()
 async function mostrarClientes1() {
      const listado = document.querySelector('#listado-clientes');
     const clientes = await obtenerClientes();
-    
+    listado.innerHTML="";
     clientes.forEach( cliente => {
         const { nombre, email, telefono, empresa, id } = cliente;
         const row = document.createElement('tr');
